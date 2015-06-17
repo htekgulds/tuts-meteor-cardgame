@@ -1,0 +1,16 @@
+<template name="signupLogin">
+    {{#if loggingIn}}
+        <h2>Logging in...</h2>
+    {{else}}
+        {{#unless currentUser}}
+            <div class="row">
+                <div class="col-md-5">
+                    {{> signup}}
+                </div>
+                <div class="col-md-offset-2 col-md-5">
+                    {{> login}}
+                </div>
+            </div>
+        {{/unless}}
+    {{/if}}
+</template>

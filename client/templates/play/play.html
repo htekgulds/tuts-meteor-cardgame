@@ -1,0 +1,20 @@
+<template name="play">
+    {{> signupLogin}}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+            {{#if currentUser}}
+                {{> status}}
+
+                {{#if inProgress}}
+                    {{> table}}
+                    {{> hand}}
+                {{/if}}
+
+                {{> pile}}
+            {{/if}}
+            </div>
+        </div>
+    </div>
+</template>

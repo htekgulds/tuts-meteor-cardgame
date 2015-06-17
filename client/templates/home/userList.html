@@ -1,0 +1,9 @@
+<template name="userList">
+    <h2>Users</h2>
+    <p>Choose another user to start the game with them: </p>
+    <ul class="list-group">
+        {{#each users}}
+            {{> userItem}}
+        {{/each}}
+    </ul>
+</template>

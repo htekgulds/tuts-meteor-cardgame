@@ -1,0 +1,15 @@
+<template name="status">
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="active">Play</li>
+        </ol>
+        <h4>Game between you and
+            <span class="text-primary">{{otherPlayer.username}}
+                {{#if inProgress}}
+                    {{#if yourTurn}}
+                        - <span class="label label-default">Your turn</span>
+                    {{/if}}
+                {{/if}}
+            </span>
+        </h4>
+</template>

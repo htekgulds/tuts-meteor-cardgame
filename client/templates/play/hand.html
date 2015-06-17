@@ -1,0 +1,11 @@
+<template name="hand">
+    <div id="hand">
+        <h3>Hand</h3>
+        {{#each player.hand}}
+            <div class="card {{suit}}">
+                <div>{{name}}</div>
+                <div>{{suit}}</div>
+            </div>
+        {{/each}}
+    </div>
+</template>

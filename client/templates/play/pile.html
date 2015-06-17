@@ -1,0 +1,10 @@
+<template name="pile">
+    <div id="pile">
+        <h3>Collected Cards</h3>
+        <ul>
+            {{#each player.pile}}
+            <li>{{name}} of {{suit}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</template>

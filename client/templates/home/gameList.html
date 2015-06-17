@@ -1,0 +1,9 @@
+<template name="gameList">
+    <h2>Games</h2>
+    <p>Choose a game you started</p>
+    <ul class="list-group">
+        {{#each games}}
+            {{> gameItem}}
+        {{/each}}
+    </ul>
+</template>

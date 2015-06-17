@@ -1,0 +1,11 @@
+<template name="table">
+    <div id="table">
+        <h3>Table</h3>
+        {{#each table}}
+            <div class="card {{suit}}">
+                <div>{{name}}</div>
+                <div>{{suit}}</div>
+            </div>
+        {{/each}}
+    </div>
+</template>

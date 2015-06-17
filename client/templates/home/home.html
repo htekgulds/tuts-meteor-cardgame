@@ -1,0 +1,13 @@
+<template name="home">
+    {{> signupLogin}}
+    {{#if currentUser}}
+        <div class="row">
+            <div class="col-md-5">
+                {{> gameList}}
+            </div>
+            <div class="col-md-offset-2 col-md-5">
+                {{> userList}}
+            </div>
+        </div>
+    {{/if}}
+</template>
