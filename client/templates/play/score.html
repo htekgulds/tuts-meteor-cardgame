@@ -1,0 +1,45 @@
+<template name="score">
+    <h2>Game Over! {{message}} </h2>
+
+	<table class="table table-bordered table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Category</th>
+				<th>You</th>
+				<th>{{otherPlayer.username}}</th>
+			</tr>
+        </thead>
+		<tbody>
+            <tr>
+                <td>Most Cards</td>
+                <td>{{player.score.mostCards}}</td>
+                <td>{{otherPlayer.score.mostCards}}</td>
+            </tr>
+            <tr>
+                <td>Most Coins</td>
+                <td>{{player.score.mostCoins}}</td>
+                <td>{{otherPlayer.score.mostCoins}}</td>
+            </tr>
+            <tr>
+                <td>Sette Bello</td>
+                <td>{{player.score.setteBello}}</td>
+                <td>{{otherPlayer.score.setteBello}}</td>
+            </tr>
+            <tr>
+                <td>Primera</td>
+                <td>{{player.score.primera}}</td>
+                <td>{{otherPlayer.score.primera}}</td>
+            </tr>
+            <tr>
+                <td>Scopa</td>
+                <td>{{player.score.scopa}}</td>
+                <td>{{otherPlayer.score.scopa}}</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>{{player.score.total}}</td>
+                <td>{{otherPlayer.score.total}}</td>
+            </tr>
+        </tbody>
+	</table>
+</template>

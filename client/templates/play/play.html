@@ -1,20 +1,24 @@
 <template name="play">
     {{> signupLogin}}
 
+    {{#if currentUser}}
     <div class="container">
         <div class="row">
             <div class="col-md-7">
-            {{#if currentUser}}
                 {{> status}}
 
+				{{#unless inProgress}}
+					{{> score}}
+				{{/unless}}
                 {{#if inProgress}}
                     {{> table}}
                     {{> hand}}
                 {{/if}}
-
+            </div>
+            <div class="col-md-offset-1 col-md-4">
                 {{> pile}}
-            {{/if}}
             </div>
         </div>
     </div>
+    {{/if}}
 </template>
