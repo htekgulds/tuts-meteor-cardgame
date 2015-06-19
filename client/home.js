@@ -9,6 +9,27 @@ Template.gameList.helpers({
             game.started = moment(game.started).fromNow();
             return game;
         });
+    },
+
+    completedGames: function () {
+        return Games.find({ inProgress: false}).map(function (game) {
+            game.otherPlayer = Meteor.users.findOne(otherId(game)).username;
+            game.finished = moment(game.finished).fromNow();
+
+            if(game.winner === 'tie') {
+                game.message = "tied";
+                game.labelType = "warning";
+            }
+            else if(game.winner === Meteor.userId()) {
+                game.message = "won";
+                game.labelType = "success";
+            }
+            else {
+                game.message = "lost";
+                game.labelType = "danger";
+            }
+            return game;
+        });
     }
 });
 

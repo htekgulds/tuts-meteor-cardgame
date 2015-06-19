@@ -1,10 +1,13 @@
 <template name="gameItem">
     <li class="list-group-item">
-        <span class="badge">
-            {{#if inProgress}}
-                {{started}}
-            {{/if}}
+        <a href="/game/{{_id}}" class="btn btn-xs btn-primary">Game with {{otherPlayer}}</a>
+        <span class="pull-right">
+        {{#if inProgress}}
+            <small class="date-info">started {{started}} </small>
+        {{else}}
+            <small class="date-info">finished {{finished}} </small>
+            <span class="label label-{{labelType}}">{{message}}</span>
+        {{/if}}
         </span>
-        <a href="/game/{{_id}}" class="btn btn-primary">Game with {{otherPlayer}}</a>
     </li>
 </template>

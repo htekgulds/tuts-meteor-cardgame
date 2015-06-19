@@ -8,5 +8,10 @@
     </ul>
 
 	<h2>Completed</h2>
+    <ul class="list-group">
+        {{#each completedGames}}
+            {{> gameItem}}
+        {{/each}}
+    </ul>
 
 </template>

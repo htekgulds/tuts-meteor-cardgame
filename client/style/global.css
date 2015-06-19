@@ -50,3 +50,7 @@
 #hand, #table {
     min-height: 250px;
 }
+
+.date-info {
+    margin-right: 10px;
+}
